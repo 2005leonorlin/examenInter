@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Items</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="main-header">
+    <h1 th:text="${titulo}"></h1>
+</header>
+
+<ul>
+    <li th:each="item : ${items}">
+        <a th:href="@{'/web/' + ${item.id}}">
+            <h4 th:text="${item.title}"></h4>
+            <p th:text="'Precio: ' + ${item.price} + '€'"></p>
+            <p th:text="'Categoría: ' + ${item.category}"></p>
+        </a>
+    </li>
+</ul>
+
+</body>
+</html>

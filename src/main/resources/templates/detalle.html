@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}"></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <h1 th:text="${titulo}"></h1>
+</header>
+
+<div>
+    <img th:src="${item.image}" alt="Imagen del ítem" width="200px">
+    <h2 th:text="${item.title}"></h2>
+    <p th:text="'Descripción: ' + ${item.description}"></p>
+    <p th:text="'Precio: ' + ${item.price} + '€'"></p>
+    <p th:text="'Categoría: ' + ${item.category}"></p>
+    <p th:text="'Valoración: ' + ${item.rate}"></p>
+    <p th:text="'Stock: ' + ${item.count}"></p>
+    <a href="/web/">Volver al listado de los items</a>
+</div>
+
+
+
+</body>
+</html>
